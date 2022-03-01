@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #519188;
+  z-index: 2;
+}
+
+main {
+  position: relative;
+  width: calc(100vw - 200px);
+  min-height: 100vh;
+  height: 1500px;
+  margin-left:200px;
+}
+
+.main_container {
+  position: relative;
+  width: 766px;
+  height: 100%;
+  float: left;
+  background-color: #f4dbc9;
+}
+
+.container2{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  float: left;
+  background-color: #d5b9b1;
+}
+
+.container2:nth-child(2){
+  position: relative;
+  width: 90%;
+  height: 45%;
+  float: left;
+  background-color: #f2d6ca;
+  margin:auto;
+  padding: 5%;
+}
+
+.container3{
+  position: relative;
+  margin-top: 4%;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 90%;
+  height: 150px;
+  background-color: #aa706a;
+}
+
+.kotak2{
+  position: relative;
+  height: 30%;
+  background-color: #519188;
+}
+
+.kotak2:nth-child(1){
+  width: 30%;
+  height: 60%;
+  margin: 5% 5%;
+  float: left;
+}
+
+.kotak2:nth-child(2){
+  width: 50%;
+  height: 20%;
+  margin-top: 6%;
+  margin-left: 3%;
+  float: left;
+}
+
+.kotak2:nth-child(3){
+  width: 50%;
+  height: 20%;
+  margin-top: 3%;
+  margin-left: 3%;
+  float: left;
+}
+
+.kotak1{
+  width: 90%;
+  position: relative;
+  background-color: yellowgreen;
+}
+
+.kotak1:nth-child(1){
+  width: 90%;
+  height: 15%;
+  background: #519188;
+  margin: 3% 5%;
+}
+
+.kotak1:nth-child(2){
+  width: 70%;
+  height: 15%;
+  background: #519188;
+  margin: 3% 5%;
+}
+
+.kotak1:nth-child(3){
+  width: 90%;
+  height: 10%;
+  background: #519188;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.kotak1:nth-child(4){
+  width: 90%;
+  height: 10%;
+  background: #519188;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.kotak1:nth-child(5){
+  width: 90%;
+  height: 10%;
+  background: #519188;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+aside {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  float: left;
+  background-color: #aa706a;
+}
+
+@media (min-width: 601px) and (max-width: 1280px) {
+  .main_container, aside {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    width: 100vw;
+    height: 58px;
+  }
+
+  main {
+    width: 100vw;
+    margin-left: 0px;
+    margin-top:58px;
+  }
+  .main_container, aside{
+    width: 100%;
+    height: 50%;
+  } 
+}
