@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Associative Array</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .card {
+      width: 250px;
+      height: 300px;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid black;
+      float: left;
+      border-radius: 25px;
+    }
+
+    .card_title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .card_des {
+      font-size: 25px;
+    }
+  </style>
+  <script>
+    var arr = [
+      {
+        'title': 'About',
+        'desc': 'I am a graphic designer and photographer majoring in Industrial and Product Design at UPH.',
+        'desc': 'I belive that design creates actions, solves problems, and teaches us to become human through being empathetic.',
+      },
+      {
+        'title': 'Interest',
+        'desc': '<li>graphic design</li>',
+        'desc': '<li>music & movies</li>',
+        'desc': '<li>architecture & furniture design</li>',
+      },
+      {
+        'title': 'Experiences',
+        'desc': 'HMDP | Head of Design Implementation Division',
+        'desc': 'EnVi Media | Graphic Designer & Translator',
+      },
+      {
+        'title': 'Contact',
+        'desc': '<a href="https://www.behance.net/alfiora"> <i class="fa-brands fa-behance-square fa-lg"></i></a><a href="https://www.linkedin.com/in/carissa-alfiora/"> <i class="fa-brands fa-linkedin fa-lg"></i></a><a href="https://www.instagram/artfiora"> <i class="fa-brands fa-instagram-square fa-lg"></i></a>',
+
+      },
+      
+    ];
+  </script>
+</head>
+<body>
+  <div id="masuk"></div>
+</body>
+</html>
+<script>
+let text = '';
+for (let i = 0; i < arr.length; i++) {
+
+  var card_title = '<div class="card_title">' + arr[i]['title'] + '</div>';
+  var card_desc = '<div class="card_desc">' + arr[i]['desc'] + '</div>';
+  var card_phone = '<div class="card_phone">' + arr[i]['telp'] + '</div>';
+
+  var card = '<div class="card">' + card_title + card_desc + card_phone + '</div>';
+
+  text += card;
+}
+
+document.querySelector('#masuk').innerHTML = text;
+</script>
