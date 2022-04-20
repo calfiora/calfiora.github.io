@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="src/logo.ico" type="image/x-icon">
+
+    <title>Login</title>
+
+    <style type="text/css">
+        /* Universal Style */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff
+        }
+
+        div.body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .bg-grey-1 {
+            background-color: rgb(206, 206, 206);
+        }
+
+        .btn-style {
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .btn-style:hover {
+            cursor: pointer;
+        }
+
+        .btn-color-1 {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        .btn-color-1:hover {
+            color: white;
+        }
+
+        .btn-color-2 {
+            background-color: rgb(230, 230, 230);
+            color: black;
+            border: none;
+        }
+
+        .btn-color-2:hover {
+            color: black;
+        }
+
+        a.link-style-1 {
+            text-decoration: none;
+            color: black;
+        }
+
+        a.link-style-1:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a.no-style {
+            text-decoration: none;
+            color: black;
+        }
+
+        button.no-style {
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+
+        button.no-style:hover {
+            cursor: pointer;
+        }
+
+        /* --------------------------------------- */
+
+        /* Header style */
+        header {
+            display: flex;
+            align-items: center;
+            flex: wrap;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        header div.img-cont {
+            width: 33.33332%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header div.menu-cont {
+            width: 66.66664%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        header div.menu-cont nav {
+            height: 100%;
+        }
+
+        header div.menu-cont nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header div.menu-cont nav ul li {
+            padding: 0.5rem;
+        }
+
+        /* --------------------------------------- */
+
+        /* Content Style */
+        div.content {
+            flex-wrap: 1;
+            padding: 1rem;
+        }
+
+        div.form-container {
+            width: 100%;
+            margin: auto 0;
+            padding: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input.text-input {
+            padding: 1rem;
+            display: block;
+            width: 100%;
+            border-radius: 0.5rem;
+            border: 1px black solid;
+        }
+
+        input.text-input:focus {
+            outline: 3px solid lightskyblue;
+        }
+
+        @media only screen and (min-width: 576px) {}
+
+        @media only screen and (min-width: 768px) {}
+
+        @media only screen and (min-width: 992px) {}
+
+        @media only screen and (min-width: 1200px) {}
+
+        @media only screen and (min-width: 1400px) {}
+
+        /* --------------------------------------- */
+
+        /* Footer Style */
+        footer {
+            background-color: gray;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        footer .logo-cont {
+            text-align: center;
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        footer .alamat-cont,
+        footer .kontak-cont,
+        footer .kategori-cont,
+        footer .copyright-cont {
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        @media only screen and (min-width: 576px) {}
+
+        @media only screen and (min-width: 768px) {
+            footer .logo-cont {
+                text-align: center;
+                width: 25%;
+            }
+
+            footer .alamat-cont,
+            footer .kontak-cont,
+            footer .kategori-cont {
+                width: 25%
+            }
+        }
+
+        /* --------------------------------------- */
+    </style>
+</head>
+
+<body>
+    <div style="min-height: 100vh; display:flex; flex-direction: column;">
+        <div style="padding:1rem">
+            <button class="btn-style btn-color-2" onclick="window.location.href='home.html'">Kembali ke home</button>
+        </div>
+        <div class="form-container">
+            <div style="text-align: center;">
+                <img src="src/logo.webp" alt="" style="width: 50%;">
+            </div>
+
+
+            <form action="" method="post" style="width: 50%; display: flex; flex-direction: column;">
+                <label for="namaLengkap" style="display: block;">Nama Lengkap:</label>
+                <input type="text" name="namaLengkap" id="namaLengkap" class="text-input">
+                <br>
+                <label for="nomorTelephone" style="display: block;">Nomor Telpon:</label>
+                <input type="tel" name="nomorTelephone" id="noTelp" class="text-input">
+                <br>
+                <label for="email" style="display: block;">Email:</label>
+                <input type="email" name="email" id="email" class="text-input">
+                <br>
+                <label for="password" style="display: block;">Password:</label>
+                <input type="password" name="password" id="password" class="text-input">
+                <br>
+                <button class="btn-style btn-color-1" type="button" onclick="register()">Submit</button>
+                <br>
+                <a class="link-style-1" style="text-align: center;" href="login.html">Masuk ke akun-mu sekarang!</a>
+            </form>
+        </div>
+        <br>
+        <footer>
+            <div class="logo-cont">
+                <img src=" src/logo.webp" alt="" style="width: 100%; max-width: 200px;">
+            </div>
+            <div class="alamat-cont">
+                <h3><b>Alamat:</b></h3>
+                <p>Jl. Kayu Pahit Tenggara No. 59, Kec. Rindu, Jakarta Pusat, DKI Jakarta</p>
+            </div>
+            <div class="kontak-cont">
+                <h3><b>Kontak:</b></h3>
+                <ul style="margin:0; padding:0; list-style-type: none;">
+                    <li>E-mail: auto-shop@gmail.com</li>
+                    <li>Phone: 088221099912</li>
+                    <li>Facebook: Auto Shop</li>
+                    <li>Twitter: @auto-shop</li>
+                </ul>
+            </div>
+            <div class="kategori-cont">
+                <h3><b>Kategori Mobil:</b></h3>
+                <ul style="margin:0; padding:0; list-style-type: none;">
+                    <li>Mobil Baru</li>
+                    <li>Mobil Bekas</li>
+                    <li>Mobil Mewah</li>
+                    <li>Mobil Keluarga</li>
+                </ul>
+            </div>
+            <hr style="width: 100%;">
+            <div class="copyright-cont" style="text-align: center;">
+                By Auto Shop&copy;
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script>
+    function register() {
+        var namaLengkap = document.getElementById("namaLengkap").value;
+        var noTelp = document.getElementById("noTelp").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if (namaLengkap != "" && noTelp != "" && email != "" && password != "") {
+            window.location.href = 'home.html';
+        }
+        else {
+            alert("Harap mengisi seluruh input!");
+        }
+    };
+</script>
+
+</html>
