@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5b9d8868c6.js" crossorigin="anonymous"></script>
+
+  <title>Hello World!</title>
+  <style>
+    * {
+      margin: 0;
+      padding:0;
+    }
+    body {font-family: "Poppins";}
+
+    .box {
+      width: 400px;
+      height: 270px;
+      border: 1px solid black;
+      float: left;
+      position: relative;
+      margin: 3% 0 5% 0;
+      padding: 15px;
+      line-height: 1.8;
+    }
+
+    .tombol {
+      display: block;
+      background-color: inherit;
+      color: black;
+      padding: 22px 16px;
+      width: 85%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    
+    .tombolcontainer{
+      float: left;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      width: 200px;
+      height: 300px;
+      margin: 3% 0 0% 5%;
+    }
+
+    .title{
+      margin: 5% 0% 0 5%;
+      line-height: 1.6;
+      width: 500px;
+      height: 50px;
+    }
+
+    .desc{
+      margin: 0 0 0 5%;
+      width: 500px;
+      height: 110px;}
+
+    .photo{
+      height: 150px;
+      width: 150px;
+      float: right;
+      margin-right: 15%;
+      margin-top: 10px;
+      background-color: blue;
+      background-size: cover;
+      background-repeat: no-repeat;}
+
+    .wholecontainer{
+      height: 800px;
+      width: 800px;
+    }
+
+  </style>
+  <script>
+    var dataku = [
+      '<p>I am a graphic designer and photographer majoring in Industrial and Product Design at UPH.</p>',
+      '<p><br>I belive that design creates actions, solves problems, and teaches us to become human through being empathetic.</p></br>' ,
+      '<p>As someone who is constantly curious, there are a few things that intrigue me, such as:</p>' ,
+      '<li>graphic design</li>' ,
+      '<li>music & movies</li>' ,
+      '<li>architecture & furniture design</li>' ,
+      '<li>UI/UX design</li>' ,
+      '<h3><p>Present</p></h3>' ,
+      '<p>HMDP | Head of Design Implementation Division</p>' ,
+      '<p>EnVi Media | Graphic Designer & Translator</p>' ,
+      '<h3><p>2020-2021</p></h3>' ,
+      '<p>UPH Movie Production Club | Member</p>' ,
+      '<p>HMDP ICIP workshop | Member of Design & Publication</p>' ,
+      '<p>The Corator | Arts & Media Content Creator</p>' ,
+      '<h2><p>Stay in touch!</p></h2>' ,
+      '<p>Grab a coffee together?</p>' ,
+      '<p>I am down to chat about anything - from design and dogs to bad dad jokes or K-dramas.</p>' ,
+      '<p>Reach me out through email, <a href = "mailto:artbyalfiora@gmail.com">here!</a></p>' ,
+      '<h2><p>Find me elsewhere!</p></h2>',
+      '<a href="https://www.behance.net/alfiora"> <i class="fa-brands fa-behance-square fa-lg"></i></a><a href="https://www.linkedin.com/in/carissa-alfiora/"> <i class="fa-brands fa-linkedin fa-lg"></i></a><a href="https://www.instagram/artfiora"> <i class="fa-brands fa-instagram-square fa-lg"></i></a>'];
+  </script>
+</head>
+
+<body>
+  <div class="wholecontainer">
+  <div class="photo" style="background-image: url('https://media-exp1.licdn.com/dms/image/C4E03AQFbLaEUSWD9ww/profile-displayphoto-shrink_800_800/0/1628830614321?e=2147483647&v=beta&t=_sG1ZbSM_02aKdOZIHYh6fSHkigmqTgFL86NkO8d6II')"></div>
+
+  <div class="title">
+    <p><b></b><h1>Hi! My name is Carissa</b></h1></p>
+  </div>
+
+  <div class="desc">
+    <p>and I am a:</p>
+    <li>curious</li>
+    <li>self driven</li>
+    <li> and multidisciplinary</li>
+    <p>...designer</p>
+  </div>
+
+  <div class="tombolcontainer">
+  <div id="btn_yellow" class="tombol" onclick="bukabox('#C9C8CA', dataku[0]+dataku[1])">About</div>
+  <div id="btn_pink" class="tombol" onclick="bukabox('#d5d4d6', dataku[2]+dataku[3]+dataku[4]+dataku[5]+dataku[6])">Interest</div>
+  <div id="btn_blue" class="tombol" onclick="bukabox('#d6d6d6', dataku[7]+dataku[8]+dataku[9]+dataku[10]+dataku[11]+dataku[12]+dataku[13])">Experiences</div>
+  <div id="btn_red" class="tombol" onclick="bukabox('#dedede', dataku[14]+dataku[15]+dataku[16]+dataku[17]+dataku[18]+dataku[19])+dataku[20]">Contact</div>
+
+</div>
+  <div id="pop" class="box"></div>
+</div>
+</body>
+</html>
+<script>
+  function bukabox(x, y) {
+    document.querySelector('#pop').style.display = "block";
+    document.querySelector('#pop').style.backgroundColor = x;
+    document.querySelector('#pop').innerHTML = y;
+    if (x == '#C9C8CA') {
+      document.querySelector('#btn_yellow').style.backgroundColor = 'grey';
+      document.querySelector('#btn_pink').style.backgroundColor = 'white';
+      document.querySelector('#btn_blue').style.backgroundColor = 'white';
+      document.querySelector('#btn_red').style.backgroundColor = 'white';
+    } else if (x == '#d5d4d6') {
+      document.querySelector('#btn_yellow').style.backgroundColor = 'white';
+      document.querySelector('#btn_pink').style.backgroundColor = 'grey';
+      document.querySelector('#btn_blue').style.backgroundColor = 'white';
+      document.querySelector('#btn_red').style.backgroundColor = 'white';
+    } else {
+      document.querySelector('#btn_yellow').style.backgroundColor = 'white';
+      document.querySelector('#btn_pink').style.backgroundColor = 'white';
+      document.querySelector('#btn_blue').style.backgroundColor = 'grey';
+      document.querySelector('#btn_red').style.backgroundColor = 'white';
+    }
+    if ( x == '#dedede'){
+      document.querySelector('#btn_yellow').style.backgroundColor = 'white';
+      document.querySelector('#btn_pink').style.backgroundColor = 'white';
+      document.querySelector('#btn_blue').style.backgroundColor = 'white';
+      document.querySelector('#btn_red').style.backgroundColor = 'grey';
+    }
+  }
+</script>
