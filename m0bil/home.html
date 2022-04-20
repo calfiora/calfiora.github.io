@@ -8,7 +8,7 @@
 
     <link rel="shortcut icon" href="src/logo.ico" type="image/x-icon">
 
-    <title>Selamat datang!</title>
+    <title>Halaman Utama</title>
 
     <style type="text/css">
         /* Universal Style */
@@ -145,77 +145,57 @@
             padding: 1rem;
         }
 
-        div.content-opening {
-            display: flex;
-            flex-wrap: wrap-reverse;
-            align-items: center;
+        .text-center {
+            text-align: center;
         }
 
-        div.content-opening .deskripsi {
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .card-space {
+            padding: 0.5rem;
             width: 100%;
         }
 
-        div.content-opening .gambar {
+        .card {
             width: 100%;
-            align-items: center;
-            display: flex;
-        }
-
-        div.card-space {
-            padding: 1rem;
-            width: 100%;
-            display: flex;
-        }
-
-        div.adv-card {
-            border: 1px black solid;
-            border-radius: 0.5rem;
+            padding: 0.5rem;
+            height: 100%;
+            border: black 1px solid;
+            box-shadow: #212529 2px 2px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-top: 1.25rem;
-            padding-bottom: 1.25rem;
-            height: 100%;
-            padding: 1rem;
         }
 
-        div.logo-mobil {
-            padding: 2rem;
-            text-align: center;
-            width: 33.33333%;
+        .card-image {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .card-body {
+            border-bottom: grey 1px solid;
         }
 
         @media only screen and (min-width: 576px) {
-            div.card-space {
+            .card-space {
                 width: 50%;
             }
         }
 
-        @media only screen and (min-width: 768px) {
-            div.content-opening .deskripsi {
-                width: 41.66667%;
-            }
-
-            div.content-opening .gambar {
-                width: 58.33333%;
-            }
-
-            div.logo-mobil {
-                width: 25%;
-            }
-        }
+        @media only screen and (min-width: 768px) {}
 
         @media only screen and (min-width: 992px) {
-
-            div.content-opening .deskripsi,
-            div.content-opening .gambar {
-                width: 50%;
+            .card-space {
+                width: 33.33332%;
             }
         }
 
         @media only screen and (min-width: 1200px) {
-            div.card-space {
+            .card-space {
                 width: 25%;
             }
         }
@@ -223,7 +203,6 @@
         @media only screen and (min-width: 1400px) {}
 
         /* --------------------------------------- */
-
 
         /* Footer Style */
         footer {
@@ -268,7 +247,7 @@
 </head>
 
 <body>
-    <div class="d-flex flex-column" style="min-height: 100vh;">
+    <div class="body">
         <header>
             <div class="img-cont">
                 <button onclick="location.href='home.html'" class="no-style">
@@ -290,115 +269,73 @@
                 </nav>
             </div>
         </header>
+
         <div class="content">
-            <div class="content-opening">
-                <div class="deskripsi col-lg-6">
-                    <h1 style="margin:0">Jual Beli Mobil Terpercaya</h1>
-                    <hr>
-                    <p>Sulit jual mobil bekas? Pernah tertipu ketika membeli mobil? Katakan tidak pada masalah-masalah
-                        tersebut. Jual dan beli mobil anda sekarang di kami.
-                        Setiap pembelian dan penjualan mobil anda dilindungi dengan garansi perusahaan kami.</p>
-                    <button onclick="location.href='home.html'" class="btn-color-1 btn-style">Tunggu
-                        Apalagi!?</button>
-                </div>
-                <div class="gambar">
-                    <img src="src/ferrari.png" alt="" style="width: 100%;">
-                </div>
-            </div>
-
-            <div style="padding: 1rem;">
-                <h2 style="display: flex; align-items: center; justify-content: center;">Kenapa harus di <img
-                        src="src/logo.webp" alt="" style="max-height: 100px;"> ?
-                </h2>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <div class="card-space">
-                        <div class="adv-card">
-                            <img src="src/trusted.png" alt="" style="max-width: 100px; width: 100%;">
-                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
-                                Terpercaya</h3>
-                            <p style="margin: 0; padding:0.5rem;text-align: center;">Kami akan menghubungkan kamu dengan
-                                pembeli atau penjual
-                                yang
-                                terpercaya dan
-                                memiliki rekam
-                                jejak yang baik. Kami mendukung transparansi ketika bertransaksi agar kalian aman dan
-                                nyaman
-                                ketika berbelanja.</p>
-                        </div>
-                    </div>
-
-                    <div class="card-space">
-                        <div class="adv-card">
-                            <img src="src/cheap.png" alt="" style="max-width: 100px; width: 100%;">
-                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
-                                Murah</h3>
-                            <p style="margin: 0; padding:0.5rem;text-align: center;">Kami membebankan biaya komisi yang
-                                murah kepada penjual.
-                                Pembeli
-                                tidak perlu membayar biaya tambahan yang lain.</p>
-                        </div>
-                    </div>
-
-                    <div class="card-space">
-                        <div class="adv-card">
-                            <img src="src/wide-connection.png" alt="" style="max-width: 100px; width: 100%;">
-                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
-                                Jaringan Luas</h3>
-                            <p style="margin: 0; padding:0.5rem;text-align: center;">Website kami sudah banyak dikenal
-                                oleh dealer-dealer mobil
-                                ternama dan juga para pembeli setia. Kamu tidak perlu khawatir, mobilmu dijamin terjual.
-                                Kamu juga tidak akan bingung ketika memilih mobil. Varian mobil yang ada di kami sangat
-                                banyak dengan berbagai jenis kategori.</p>
-                        </div>
-                    </div>
-
-                    <div class="card-space">
-                        <div class="adv-card">
-                            <img src="src/target.png" alt="" style="max-width: 100px; width: 100%;">
-                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
-                                Tepat Sasaran</h3>
-                            <p style="margin: 0; padding:0.5rem;text-align: center;">Website kami menggunakan teknologi
-                                AI tercanggih. Dijamin mobil
-                                yang kamu jual akan tepat pada pembeli yang membutuhkan.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <br>
             <div>
-                <h2 style="text-align: center;">Jenis Mobil</h2>
-                <div style="display: flex; justify-content: center; flex-wrap: wrap; align-items: center;">
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/bmw-logo.png" alt="" style="width: 100%;">
+                <h4 class="text-center" style="margin:0; font-size: 2rem;">Mobil yang Sedang Tersedia</h4>
+                <hr>
+                <div class="card-container">
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/honda-mobil-1.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Honda Odyssey</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$32,290 - $48,020</h6>
+                            </div>
+                        </div>
                     </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/chevrolet-logo.png" alt="" style="width: 100%;">
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/honda-mobil-2.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Honda Civic</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$21,700- $28,300</h6>
+                            </div>
+                        </div>
                     </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/daihatsu-logo.png" alt="" style="width: 100%;">
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/chevrolet-mobil-1.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Chevrolet Silverado 3500HD</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$37,000 - $66,200</h6>
+                            </div>
+                        </div>
                     </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/honda-logo.png" alt="" style="width: 100%;">
-                    </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/hyundai-logo.png" alt="" style="max-width: 150px; width: 100%;">
-                    </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/jeep-logo.png" alt="" style="width: 100%;">
-                    </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/lamborgini-logo.png" alt="" style="width: 100%;">
-                    </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/lexus-logo.png" alt="" style="width: 100%;">
-                    </div>
-                    <div class="logo-mobil">
-                        <img src="src/dealer-logo/subaru-logo.png" alt="" style="width: 100%;">
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/chevrolet-mobil-2.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Chevrolet Corvette</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$60,900 - $79,850</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <br>
+
         <footer>
             <div class="logo-cont">
                 <img src=" src/logo.webp" alt="" style="width: 100%; max-width: 200px;">
