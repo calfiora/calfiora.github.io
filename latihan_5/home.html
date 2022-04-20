@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="src/logo.ico" type="image/x-icon">
+
+    <title>Halaman Utama</title>
+
+    <style type="text/css">
+        /* Universal Style */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff
+        }
+
+        div.body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .bg-grey-1 {
+            background-color: rgb(206, 206, 206);
+        }
+
+        .btn-style {
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .btn-style:hover {
+            cursor: pointer;
+        }
+
+        .btn-color-1 {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        .btn-color-1:hover {
+            color: white;
+        }
+
+        .btn-color-2 {
+            background-color: rgb(230, 230, 230);
+            color: black;
+            border: none;
+        }
+
+        .btn-color-2:hover {
+            color: black;
+        }
+
+        a.link-style-1 {
+            color: black;
+        }
+
+        a.link-style-1:hover {
+            color: black;
+        }
+
+        a.no-style {
+            text-decoration: none;
+            color: black;
+        }
+
+        button.no-style {
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+
+        button.no-style:hover {
+            cursor: pointer;
+        }
+
+        /* --------------------------------------- */
+
+        /* Header style */
+        header {
+            display: flex;
+            align-items: center;
+            flex: wrap;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        header div.img-cont {
+            width: 33.33332%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header div.menu-cont {
+            width: 66.66664%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        header div.menu-cont nav {
+            height: 100%;
+        }
+
+        header div.menu-cont nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header div.menu-cont nav ul li {
+            padding: 0.5rem;
+        }
+
+        /* --------------------------------------- */
+
+        /* Content Style */
+        div.content {
+            flex-wrap: 1;
+            padding: 1rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .card-space {
+            padding: 0.5rem;
+            width: 100%;
+        }
+
+        .card {
+            width: 100%;
+            padding: 0.5rem;
+            height: 100%;
+            border: black 1px solid;
+            box-shadow: #212529 2px 2px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .card-body {
+            border-bottom: grey 1px solid;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .card-space {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {}
+
+        @media only screen and (min-width: 992px) {
+            .card-space {
+                width: 33.33332%;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .card-space {
+                width: 25%;
+            }
+        }
+
+        @media only screen and (min-width: 1400px) {}
+
+        /* --------------------------------------- */
+
+        /* Footer Style */
+        footer {
+            background-color: gray;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        footer .logo-cont {
+            text-align: center;
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        footer .alamat-cont,
+        footer .kontak-cont,
+        footer .kategori-cont,
+        footer .copyright-cont {
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        @media only screen and (min-width: 576px) {}
+
+        @media only screen and (min-width: 768px) {
+            footer .logo-cont {
+                text-align: center;
+                width: 25%;
+            }
+
+            footer .alamat-cont,
+            footer .kontak-cont,
+            footer .kategori-cont {
+                width: 25%
+            }
+        }
+
+        /* --------------------------------------- */
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <div class="img-cont">
+                <button onclick="window.location.href='home.html'" class="no-style">
+                    <img src="src/logo.webp" alt="" style="height: 75px;">
+                </button>
+            </div>
+            <div class="menu-cont">
+                <nav>
+                    <ul>
+                        <li>
+                            <button onclick="window.location.href='login.html'"
+                                class="btn-color-2 btn-style">Login</button>
+                        </li>
+                        <li>
+                            <button onclick="window.location.href='register.html'"
+                                class="btn-color-1 btn-style">Register</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="content">
+            <br>
+            <div>
+                <h4 class="text-center" style="margin:0; font-size: 2rem;">Mobil yang Sedang Tersedia</h4>
+                <hr>
+                <div class="card-container">
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/honda-mobil-1.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Honda Odyssey</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$32,290 - $48,020</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/honda-mobil-2.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Honda Civic</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$21,700- $28,300</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/chevrolet-mobil-1.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Chevrolet Silverado 3500HD</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$37,000 - $66,200</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-space">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="src/cthMobil/chevrolet-mobil-2.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                            <div>
+                                <h5 style="font-size: 1.5rem; margin: 0;">2022 Chevrolet Corvette</h5>
+                                <h6 style="font-size: 1rem; margin: 0; color: grey;">$60,900 - $79,850</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo-cont">
+                <img src=" src/logo.webp" alt="" style="width: 100%; max-width: 200px;">
+            </div>
+            <div class="alamat-cont">
+                <h3><b>Alamat:</b></h3>
+                <p>Jl. Kayu Pahit Tenggara No. 59, Kec. Rindu, Jakarta Pusat, DKI Jakarta</p>
+            </div>
+            <div class="kontak-cont">
+                <h3><b>Kontak:</b></h3>
+                <ul style="margin:0; padding:0; list-style-type: none;">
+                    <li>E-mail: auto-shop@gmail.com</li>
+                    <li>Phone: 088221099912</li>
+                    <li>Facebook: Auto Shop</li>
+                    <li>Twitter: @auto-shop</li>
+                </ul>
+            </div>
+            <div class="kategori-cont">
+                <h3><b>Kategori Mobil:</b></h3>
+                <ul style="margin:0; padding:0; list-style-type: none;">
+                    <li>Mobil Baru</li>
+                    <li>Mobil Bekas</li>
+                    <li>Mobil Mewah</li>
+                    <li>Mobil Keluarga</li>
+                </ul>
+            </div>
+            <hr style="width: 100%;">
+            <div class="copyright-cont" style="text-align: center;">
+                By Auto Shop&copy;
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

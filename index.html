@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="src/logo.ico" type="image/x-icon">
+
+    <title>Selamat datang!</title>
+
+    <style type="text/css">
+        /* Universal Style */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff
+        }
+
+        div.body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .bg-grey-1 {
+            background-color: rgb(206, 206, 206);
+        }
+
+        .btn-style {
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .btn-style:hover {
+            cursor: pointer;
+        }
+
+        .btn-color-1 {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        .btn-color-1:hover {
+            color: white;
+        }
+
+        .btn-color-2 {
+            background-color: rgb(230, 230, 230);
+            color: black;
+            border: none;
+        }
+
+        .btn-color-2:hover {
+            color: black;
+        }
+
+        a.link-style-1 {
+            color: black;
+        }
+
+        a.link-style-1:hover {
+            color: black;
+        }
+
+        a.no-style {
+            text-decoration: none;
+            color: black;
+        }
+
+        button.no-style {
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+
+        button.no-style:hover {
+            cursor: pointer;
+        }
+
+        /* --------------------------------------- */
+
+        /* Header style */
+        header {
+            display: flex;
+            align-items: center;
+            flex: wrap;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        header div.img-cont {
+            width: 33.33332%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header div.menu-cont {
+            width: 66.66664%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        header div.menu-cont nav {
+            height: 100%;
+        }
+
+        header div.menu-cont nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header div.menu-cont nav ul li {
+            padding: 0.5rem;
+        }
+
+        /* --------------------------------------- */
+
+        /* Content Style */
+        div.content {
+            flex-wrap: 1;
+            padding: 1rem;
+        }
+
+        div.content-opening {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            align-items: center;
+        }
+
+        div.content-opening .deskripsi {
+            width: 100%;
+        }
+
+        div.content-opening .gambar {
+            width: 100%;
+            align-items: center;
+            display: flex;
+        }
+
+        div.card-space {
+            padding: 1rem;
+            width: 100%;
+            display: flex;
+        }
+
+        div.adv-card {
+            border: 1px black solid;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+            height: 100%;
+            padding: 1rem;
+        }
+
+        div.logo-mobil {
+            padding: 2rem;
+            text-align: center;
+            width: 33.33333%;
+        }
+
+        @media only screen and (min-width: 576px) {
+            div.card-space {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            div.content-opening .deskripsi {
+                width: 41.66667%;
+            }
+
+            div.content-opening .gambar {
+                width: 58.33333%;
+            }
+
+            div.logo-mobil {
+                width: 25%;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+
+            div.content-opening .deskripsi,
+            div.content-opening .gambar {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            div.card-space {
+                width: 25%;
+            }
+        }
+
+        @media only screen and (min-width: 1400px) {}
+
+        /* --------------------------------------- */
+
+
+        /* Footer Style */
+        footer {
+            background-color: gray;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        footer .logo-cont {
+            text-align: center;
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        footer .alamat-cont,
+        footer .kontak-cont,
+        footer .kategori-cont,
+        footer .copyright-cont {
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        @media only screen and (min-width: 576px) {}
+
+        @media only screen and (min-width: 768px) {
+            footer .logo-cont {
+                text-align: center;
+                width: 25%;
+            }
+
+            footer .alamat-cont,
+            footer .kontak-cont,
+            footer .kategori-cont {
+                width: 25%
+            }
+        }
+
+        /* --------------------------------------- */
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column" style="min-height: 100vh;">
+        <header>
+            <div class="img-cont">
+                <button onclick="window.location.href='home.html'" class="no-style">
+                    <img src="src/logo.webp" alt="" style="height: 75px;">
+                </button>
+            </div>
+            <div class="menu-cont">
+                <nav>
+                    <ul>
+                        <li>
+                            <button onclick="window.location.href='login.html'"
+                                class="btn-color-2 btn-style">Login</button>
+                        </li>
+                        <li>
+                            <button onclick="window.location.href='register.html'"
+                                class="btn-color-1 btn-style">Register</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <div class="content-opening">
+                <div class="deskripsi col-lg-6">
+                    <h1 style="margin:0">Jual Beli Mobil Terpercaya</h1>
+                    <hr>
+                    <p>Sulit jual mobil bekas? Pernah tertipu ketika membeli mobil? Katakan tidak pada masalah-masalah
+                        tersebut. Jual dan beli mobil anda sekarang di kami.
+                        Setiap pembelian dan penjualan mobil anda dilindungi dengan garansi perusahaan kami.</p>
+                    <button onclick="window.location.href='home.html'" class="btn-color-1 btn-style">Tunggu
+                        Apalagi!?</button>
+                </div>
+                <div class="gambar">
+                    <img src="src/ferrari.png" alt="" style="width: 100%;">
+                </div>
+            </div>
+
+            <div style="padding: 1rem;">
+                <h2 style="display: flex; align-items: center; justify-content: center;">Kenapa harus di <img
+                        src="src/logo.webp" alt="" style="max-height: 100px;"> ?
+                </h2>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <div class="card-space">
+                        <div class="adv-card">
+                            <img src="src/trusted.png" alt="" style="max-width: 100px; width: 100%;">
+                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
+                                Terpercaya</h3>
+                            <p style="margin: 0; padding:0.5rem;text-align: center;">Kami akan menghubungkan kamu dengan
+                                pembeli atau penjual
+                                yang
+                                terpercaya dan
+                                memiliki rekam
+                                jejak yang baik. Kami mendukung transparansi ketika bertransaksi agar kalian aman dan
+                                nyaman
+                                ketika berbelanja.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-space">
+                        <div class="adv-card">
+                            <img src="src/cheap.png" alt="" style="max-width: 100px; width: 100%;">
+                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
+                                Murah</h3>
+                            <p style="margin: 0; padding:0.5rem;text-align: center;">Kami membebankan biaya komisi yang
+                                murah kepada penjual.
+                                Pembeli
+                                tidak perlu membayar biaya tambahan yang lain.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-space">
+                        <div class="adv-card">
+                            <img src="src/wide-connection.png" alt="" style="max-width: 100px; width: 100%;">
+                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
+                                Jaringan Luas</h3>
+                            <p style="margin: 0; padding:0.5rem;text-align: center;">Website kami sudah banyak dikenal
+                                oleh dealer-dealer mobil
+                                ternama dan juga para pembeli setia. Kamu tidak perlu khawatir, mobilmu dijamin terjual.
+                                Kamu juga tidak akan bingung ketika memilih mobil. Varian mobil yang ada di kami sangat
+                                banyak dengan berbagai jenis kategori.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-space">
+                        <div class="adv-card">
+                            <img src="src/target.png" alt="" style="max-width: 100px; width: 100%;">
+                            <h3 style="margin: 0; padding:0.5rem;text-align: center;">
+                                Tepat Sasaran</h3>
+                            <p style="margin: 0; padding:0.5rem;text-align: center;">Website kami menggunakan teknologi
+                                AI tercanggih. Dijamin mobil
+                                yang kamu jual akan tepat pada pembeli yang membutuhkan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <h2 style="text-align: center;">Jenis Mobil</h2>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; align-items: center;">
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/bmw-logo.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/chevrolet-logo.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/daihatsu-logo.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/honda-logo.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/hyundai-logo.png" alt="" style="max-width: 150px; width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/jeep-logo.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/lamborgini-logo.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/lexus-logo.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="logo-mobil">
+                        <img src="src/dealer-logo/subaru-logo.png" alt="" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer>
+            <div class="logo-cont">
+                <img src=" src/logo.webp" alt="" style="width: 100%; max-width: 200px;">
+            </div>
+            <div class="alamat-cont">
+                <h3><b>Alamat:</b></h3>
+                <p>Jl. Kayu Pahit Tenggara No. 59, Kec. Rindu, Jakarta Pusat, DKI Jakarta</p>
+            </div>
+            <div class="kontak-cont">
+                <h3><b>Kontak:</b></h3>
+                <ul style="margin:0; padding:0; list-style-type: none;">
+                    <li>E-mail: auto-shop@gmail.com</li>
+                    <li>Phone: 088221099912</li>
+                    <li>Facebook: Auto Shop</li>
+                    <li>Twitter: @auto-shop</li>
+                </ul>
+            </div>
+            <div class="kategori-cont">
+                <h3><b>Kategori Mobil:</b></h3>
+                <ul style="margin:0; padding:0; list-style-type: none;">
+                    <li>Mobil Baru</li>
+                    <li>Mobil Bekas</li>
+                    <li>Mobil Mewah</li>
+                    <li>Mobil Keluarga</li>
+                </ul>
+            </div>
+            <hr style="width: 100%;">
+            <div class="copyright-cont" style="text-align: center;">
+                By Auto Shop&copy;
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
